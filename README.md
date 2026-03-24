@@ -113,27 +113,35 @@ Application calculates:
 
 ## Project Structure
 
+### 📁 Project Structure
+
+```
 motionlab/
-│── pages/
+├── pages/
 │   ├── index.html
 │   ├── workout.html
 │   └── nutrition.html
-│── assets/
+│
+├── assets/
 │   ├── css/
 │   │   └── style.css
 │   ├── js/
 │   │   └── main.js
 │   ├── images/
 │   └── icons/
-│── api/
+│
+├── api/
 │   ├── exercise.js
 │   └── nutrition.js
-│── utils/
+│
+├── utils/
 │   └── physics.js
-│── components/
+│
+├── components/
 │   └── card.js
-│── README.md
-
+│
+└── README.md
+```
 
 ## How to Run
 
