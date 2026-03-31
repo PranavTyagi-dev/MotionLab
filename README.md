@@ -109,39 +109,33 @@ Application calculates:
 * HTML
 * CSS
 * JavaScript
-* REST APIs
 
 ## Project Structure
 
-### 📁 Project Structure
-
-```
 motionlab/
-├── pages/
-│   ├── index.html
+│── pages/
 │   ├── workout.html
 │   └── nutrition.html
-│
-├── assets/
+│── assets/
 │   ├── css/
-│   │   └── style.css
+│   │   ├── index.css
+│   │   ├── workout.css
+│   │   └── nutrition.css
 │   ├── js/
-│   │   └── main.js
+│   │   └── nutrition.js
+|   |   └── nutrition.js
 │   ├── images/
 │   └── icons/
-│
-├── api/
+│── api/
 │   ├── exercise.js
 │   └── nutrition.js
-│
-├── utils/
+│── utils/
 │   └── physics.js
-│
-├── components/
+│── components/
 │   └── card.js
-│
-└── README.md
-```
+├── index.html
+│── README.md
+
 
 ## How to Run
 
