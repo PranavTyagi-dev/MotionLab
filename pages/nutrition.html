@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nutrition Tracker | MotionLab</title>
+  <link rel="stylesheet" href="../assets/css/nutrition.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html">MotionLab</a>
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="workout.html">Workout Analyzer</a>
+        <a class="active" href="nutrition.html">Nutrition Tracker</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1>Nutrition Tracker</h1>
+      <p class="lead compact">Search foods, inspect nutrition values, and maintain a daily calorie and macro log.</p>
+
+      <section class="panel">
+        <h2>Food Search (Open Food Facts)</h2>
+        <div class="row-search">
+          <input id="food-query" type="text" placeholder="Search food product, e.g. oats, milk, paneer" />
+          <button id="food-search-btn" type="button" class="btn btn-primary">Search</button>
+        </div>
+        <div id="food-results" class="cards-grid cards-2"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Daily Intake Summary</h2>
+        <div id="nutrition-summary" class="stats-grid"></div>
+      </section>
+
+      <section class="panel">
+        <div class="row-between">
+          <h2>Food Log</h2>
+          <button id="clear-food-log" class="btn btn-secondary" type="button">Clear Log</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Food</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Carbs (g)</th>
+                <th>Fat (g)</th>
+              </tr>
+            </thead>
+            <tbody id="food-log-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+
+  <script type="module" src="../assets/js/nutrition.js"></script>
+</body>
+</html>

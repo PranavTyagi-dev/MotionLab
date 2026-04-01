@@ -111,9 +111,10 @@ Application calculates:
 * JavaScript
 
 ## Project Structure
-
+```
 motionlab/
 │── pages/
+│   ├── index.html
 │   ├── workout.html
 │   └── nutrition.html
 │── assets/
@@ -123,7 +124,7 @@ motionlab/
 │   │   └── nutrition.css
 │   ├── js/
 │   │   └── nutrition.js
-|   |   └── nutrition.js
+|   |   └── workout.js
 │   ├── images/
 │   └── icons/
 │── api/
@@ -133,9 +134,9 @@ motionlab/
 │   └── physics.js
 │── components/
 │   └── card.js
-├── index.html
+│──index.html
 │── README.md
-
+```
 
 ## How to Run
 

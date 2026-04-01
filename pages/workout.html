@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workout Analyzer | MotionLab</title>
+  <link rel="stylesheet" href="../assets/css/workout.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html">MotionLab</a>
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="active" href="workout.html">Workout Analyzer</a>
+        <a href="nutrition.html">Nutrition Tracker</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1>Workout Analyzer</h1>
+      <p class="lead compact">Search exercises, then calculate force, work, and energy based on your workout inputs.</p>
+
+      <section class="panel">
+        <h2>Physics Calculator</h2>
+        <div class="form-grid form-grid-4">
+          <label>
+            Selected exercise
+            <input id="selected-exercise" type="text" placeholder="Select an exercise card" readonly />
+          </label>
+          <label>
+            Weight (kg)
+            <input id="weight-input" type="number" min="0" step="0.1" placeholder="50" />
+          </label>
+          <label>
+            Repetitions
+            <input id="reps-input" type="number" min="1" step="1" placeholder="12" />
+          </label>
+          <label>
+            Distance (m)
+            <input id="distance-input" type="number" min="0" step="0.01" placeholder="0.5" />
+          </label>
+        </div>
+        <div class="hero-actions">
+          <button id="calc-btn" class="btn btn-primary" type="button">Calculate</button>
+          <button id="save-workout-btn" class="btn btn-secondary" type="button">Save Entry</button>
+        </div>
+
+        <div id="physics-results" class="stats-grid">
+          <article class="stat">
+            <div id="force-value" class="value">0.00 N</div>
+            <div class="label">Force</div>
+          </article>
+          <article class="stat">
+            <div id="work-value" class="value">0.00 J</div>
+            <div class="label">Work</div>
+          </article>
+          <article class="stat">
+            <div id="energy-value" class="value">0.00 J</div>
+            <div class="label">Energy</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Workout Progress</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Exercise</th>
+                <th>Force (N)</th>
+                <th>Work (J)</th>
+                <th>Energy (J)</th>
+              </tr>
+            </thead>
+            <tbody id="workout-log-body">
+              <tr id="empty-log-row">
+                <td colspan="5" class="empty">No workout entries yet.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Exercise Search</h2>
+        <div class="form-grid form-grid-4">
+          <label>
+            Search by name
+            <input id="exercise-query" type="text" placeholder="e.g., squat, push up" />
+          </label>
+          <label>
+            Muscle group
+            <select id="muscle-filter">
+              <option value="all">All</option>
+              <option value="abdominals">Abdominals</option>
+              <option value="arms">Arms</option>
+              <option value="back">Back</option>
+              <option value="biceps">Biceps</option>
+              <option value="calves">Calves</option>
+              <option value="chest">Chest</option>
+              <option value="glutes">Glutes</option>
+              <option value="hamstrings">Hamstrings</option>
+              <option value="legs">Legs</option>
+              <option value="quadriceps">Quadriceps</option>
+              <option value="shoulders">Shoulders</option>
+              <option value="triceps">Triceps</option>
+            </select>
+          </label>
+          <label>
+            Equipment
+            <select id="equipment-filter">
+              <option value="all">All</option>
+              <option value="assisted">Assisted</option>
+              <option value="barbell">Barbell</option>
+              <option value="bodyweight">Bodyweight</option>
+              <option value="cable">Cable</option>
+              <option value="dumbbell">Dumbbell</option>
+              <option value="ez bar">EZ Bar</option>
+              <option value="kettlebell">Kettlebell</option>
+              <option value="machine">Machine</option>
+              <option value="smith machine">Smith Machine</option>
+            </select>
+          </label>
+          <label>
+            Body part
+            <select id="bodypart-filter">
+              <option value="all">All</option>
+              <option value="arms">Arms</option>
+              <option value="back">Back</option>
+              <option value="cardio">Cardio</option>
+              <option value="chest">Chest</option>
+              <option value="legs">Legs</option>
+              <option value="shoulders">Shoulders</option>
+              <option value="torso">Torso</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Exercise Results</h2>
+        <div id="exercise-results" class="cards-grid cards-2">
+          <p id="exercise-loading" class="empty">Loading exercises...</p>
+        </div>
+        <p id="exercise-empty" class="empty" hidden>No exercises match your filters.</p>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="../assets/js/workout.js"></script>
+</body>
+</html>
